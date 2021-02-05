@@ -1,0 +1,291 @@
+/* SETUP GENERAL */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: content-box;
+}
+
+@font-face {
+  font-family: "StayHome";
+  src: url("src/STAYHOME.otf");
+}
+
+html {
+  font-size: 62.5%;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+:root {
+  --grisFonce: #222831;
+  --grisMoyen: #393e46;
+  --jaune: #ffd369;
+  --blanc: #eeeeee;
+}
+
+::selection {
+  background: #2e5999;
+  color: var(--blanc);
+}
+
+body {
+  display: grid;
+  background-color: var(--grisFonce);
+}
+
+main {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--grisFonce);
+  display: grid;
+  place-content: center;
+}
+
+
+/* VERSION DESKTOP */
+@media (min-width: 768px) {
+  #mainBlock {
+    height: 50rem;
+    width: 100%;
+    display: grid;
+    place-content: center;
+    text-align: center;
+  }
+
+  #mainBlock > h1 {
+    font-size: 10rem;
+    font-family: STAYHOME;
+    color: var(--blanc);
+    margin-bottom: 10rem;
+  }
+
+  #mainBlock > h1 > span {
+    color: var(--jaune);
+  }
+
+  #mainBlock > form {
+    display: grid;
+    grid-template-columns: 90% 10%;
+    place-content: center;
+    margin-bottom: 10rem;
+  }
+
+  #mainBlock > form > input,
+  #mainBlock > form > input::placeholder {
+    grid-area: 1 / 1 / 1 / 1;
+    height: 4rem;
+    width: 60rem;
+    font-size: 2.5rem;
+    text-align: center;
+    color: var(--blanc);
+    background-color: var(--grisMoyen);
+    outline: none;
+    border: none;
+  }
+
+  #mainBlock form button,
+  #mainBlock form button object img {
+    grid-area: 1 / 2 / 1 / 2;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+  }
+
+  #mainBlock form button {
+    height: 4rem;
+    width: 3.8rem;
+    padding-left: 0.1rem;
+    padding-right: 0.1rem;
+    background-color: var(--grisMoyen);
+    display: grid;
+    place-content: center;
+  }
+
+  #mainBlock form button img {
+    height: 3.5rem;
+    width: 3.5rem;
+  }
+
+  #mainBlock > form > button {
+    margin-left: 1.2rem;
+  }
+
+  #mainBlock > p {
+    color: var(--blanc);
+    font-size: 1.7rem;
+    font-style: italic;
+    font-family: STAYHOME;
+    letter-spacing: 1rem;
+  }
+
+  #divResultat {
+    color: var(--blanc);
+    font-size: 3rem;
+    font-family: STAYHOME;
+    text-align: center;
+    background-color: var(--grisMoyen);
+    border-radius: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #divResultat * {
+    margin: 1rem;
+  }
+
+  #lalignedudesigner {
+    width: 5rem;
+    height: 1px;
+    background-color: var(--blanc);
+  }
+}
+
+/* VERSION MOBILE */
+@media (max-width: 767px) {
+    #mainBlock {
+      height: 30rem;
+      width: 90vw;
+      display: grid;
+      place-content: center;
+      text-align: center;
+    }
+  
+    #mainBlock > h1 {
+      font-size: 6rem;
+      font-family: STAYHOME;
+      color: var(--blanc);
+      margin-bottom: 5rem;
+    }
+  
+    #mainBlock > h1 > span {
+      color: var(--jaune);
+    }
+  
+    #mainBlock > form {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      place-content: center;
+      margin-bottom: 5rem;
+    }
+  
+    #mainBlock > form > input,
+    #mainBlock > form > input::placeholder {
+      grid-area: 1 / 1 / 1 / 1;
+      height: 4rem;
+      width: 90%;
+      font-size: 2.5rem;
+      text-align: center;
+      color: var(--blanc);
+      background-color: var(--grisMoyen);
+      outline: none;
+      border: none;
+    }
+  
+    #mainBlock form button,
+    #mainBlock form button object img {
+      grid-area: 1 / 2 / 1 / 2;
+      border: none;
+      outline: none;
+      background: none;
+      cursor: pointer;
+    }
+  
+    #mainBlock form button {
+      height: 4rem;
+      width: 3.8rem;
+      padding-left: 0.1rem;
+      padding-right: 0.1rem;
+      display: grid;
+      place-content: center;
+    }
+  
+    #mainBlock form button img {
+      height: 3.5rem;
+      width: 3.5rem;
+    }
+  
+    #mainBlock > form > button {
+      margin-left: -1rem;
+    }
+  
+    #mainBlock > p {
+      color: var(--blanc);
+      font-size: 1.7rem;
+      font-style: italic;
+      font-family: STAYHOME;
+      letter-spacing: 1rem;
+    }
+  
+    #divResultat {
+      color: var(--blanc);
+      font-size: 2.5rem;
+      font-family: STAYHOME;
+      text-align: center;
+      background-color: var(--grisMoyen);
+      border-radius: 3rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    #divResultat * {
+      margin: 1rem;
+    }
+  
+    #lalignedudesigner {
+      width: 5rem;
+      height: 1px;
+      background-color: var(--blanc);
+    }
+  }
+
+  /* <3 */
+  body > div{
+    animation: colorchange 1s linear 1s infinite;
+    /* animation-name followed by duration in seconds*/
+    /* you could also use milliseconds (ms) or something like 2.5s */
+    -webkit-animation: colorchange 1s linear 0s infinite alternate;
+    /* Chrome and Safari */
+}
+
+@keyframes colorchange {
+    0% {
+        background: rgba(255, 0, 0, 0.5);
+    }
+
+    33% {
+        background: rgba(0, 255, 0, 0.5);
+    }
+
+    66% {
+        background: rgba(0, 0, 255, 0.5);
+    }
+
+    100% {
+        background: rgba(255, 0, 0, 0.5);
+    }
+}
+
+@-webkit-keyframes colorchange
+
+/* Safari and Chrome - necessary duplicate */
+    {
+    0% {
+        background: rgba(255, 0, 0, 0.5);
+    }
+
+    33% {
+        background: rgba(0, 255, 0, 0.5);
+    }
+
+    66% {
+        background: rgba(0, 0, 255, 0.5);
+    }
+
+    100% {
+        background: rgba(255, 0, 0, 0.5);
+    }
+}
