@@ -29,4 +29,5 @@ Vous pouvez aussi voir plus en détail en cliquant [ici](https://developers.goog
 Vous pouvez visiter le site en cliquant **[ICI](https://dev5.projects.go.yo.fr/Vapeur-Douce/)**
 
 ### 7 - Le support de présentation
-La présentation codée avec reveal.js c'est par [ici](!!!!!ajouterurlici!!!!!) 
+La présentation codée avec reveal.js c'est par [ici](http://dev5.projects.go.yo.fr/PRESEVAL/vraipres.html)
+Version longue : [par ici](http://dev5.projects.go.yo.fr/PRESEVAL/)
